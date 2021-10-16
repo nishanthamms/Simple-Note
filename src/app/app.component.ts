@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage-angular';
+import { ThemeService } from './services/theme.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +9,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Notes', url: '/folder/Inbox', icon: 'bookmarks' },
+    { title: 'Settings', url: 'settings', icon: 'settings' },
+    { title: 'About', url: '/folder/Favorites', icon: 'information-circle' },
+    { title: 'Exit', url: '/folder/Archived', icon: 'exit' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  
+  constructor( private storage: Storage,
+              private themeService: ThemeService,
+    ) {
+     this.initializeApp();
+    }
+
+    initializeApp() {
+  
+      this.storage.get('dark-theme').then((val) => {
+        console.log('Theme From Storage', val);
+        if(val) {
+          this.themeService.enableDark();
+        }
+      });
+  
+    }
 }
