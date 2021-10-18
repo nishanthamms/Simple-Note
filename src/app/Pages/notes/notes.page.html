@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar  [(ngModel)]="term" animated="true"></ion-searchbar>
+  <ion-list>
+    <ion-list-header>
+      <!--ion-label>Notes</ion-label-->
+    </ion-list-header>
+    <div *ngFor="let note of (notes | async) ">
+      <ion-item>
+      <ion-thumbnail  slot="start"> 
+        <img class="check" src="src/assets/images/note.png">     
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{note.title}}</h2>
+        <p>{{note.content}}</p>
+      </ion-label>
+      <ion-button  color="success" fill="outline" slot="end"  (click)="viewNote(note.id)">View</ion-button>
+    </ion-item>
+   
+  </div>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/add-note">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

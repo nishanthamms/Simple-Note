@@ -9,14 +9,14 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Notes', url: '/folder/Inbox', icon: 'bookmarks' },
+    { title: 'Notes', url: 'notes', icon: 'bookmarks' },
     { title: 'Settings', url: 'settings', icon: 'settings' },
     { title: 'About', url: '/folder/Favorites', icon: 'information-circle' },
     { title: 'Exit', url: '/folder/Archived', icon: 'exit' },
   ];
   
   constructor( private storage: Storage,
-              private themeService: ThemeService,
+               private themeService: ThemeService,
     ) {
      this.initializeApp();
     }
