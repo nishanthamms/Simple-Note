@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -16,7 +16,7 @@
     <div *ngFor="let note of (notes | async) ">
       <ion-item>
       <ion-thumbnail  slot="start"> 
-        <img class="check" src="src/assets/images/note.png">     
+        <img class="check" src="/assets/images/note.png">     
       </ion-thumbnail>
       <ion-label>
         <h2>{{note.title}}</h2>

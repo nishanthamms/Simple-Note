@@ -22,6 +22,6 @@ export class NotesPage implements OnInit {
   viewNote(noteId){
     sessionStorage.setItem('noteId', noteId);
    // this.nav.navigateForward('tabs/chat'); 
-     //this.router.navigateByUrl('/tabs/viewnotes/'+noteId);
+     this.router.navigateByUrl('/viewnote/'+noteId);
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Note} from '../models/Note';
+import {Note} from 'src/app/models/Note';
 import {AngularFirestore, AngularFirestoreCollection, DocumentReference} from '@angular/fire/compat/firestore';
 import {map, take} from 'rxjs/operators';
 
