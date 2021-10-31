@@ -2,11 +2,10 @@
 
 <h3>Used Technologies</h3>
 
-<ul>
-<li>Ionic<li/>
-<li>Angular<li/>
-<li>Firebase<li/>
-</ul>
+  Ionic
+  Angular
+  Firebase
+
 
 <img src="ss1.png" width="50%" height="50%">
 <img src="ss2.png" width="50%" height="50%">
