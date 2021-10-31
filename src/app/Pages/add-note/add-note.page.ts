@@ -22,7 +22,7 @@ export class AddNotePage implements OnInit {
   }
   addNote() {
     this.noteService.addNote(this.note).then(() => {
-      //this.router.navigateByUrl('/tabs/notes');
+      this.router.navigateByUrl('/notes');
     }, err => {
     });
   }

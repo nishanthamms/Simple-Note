@@ -27,7 +27,11 @@ const routes: Routes = [
   {
     path: 'update-note/:id',
     loadChildren: () => import('./Pages/update-note/update-note.module').then( m => m.UpdateNotePageModule)
+  },  {
+    path: 'about',
+    loadChildren: () => import('./Pages/about/about.module').then( m => m.AboutPageModule)
   }
+
 
 
 ];

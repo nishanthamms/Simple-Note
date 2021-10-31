@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NotesPage implements OnInit {
 
   public notes: Observable<Note[]>;
-  term = '';
+  term:string ;
   constructor(private noteService: NoteService,private router: Router) { }
 
   ngOnInit() {
@@ -21,7 +21,6 @@ export class NotesPage implements OnInit {
   }
   viewNote(noteId){
     sessionStorage.setItem('noteId', noteId);
-   // this.nav.navigateForward('tabs/chat'); 
-     this.router.navigateByUrl('/viewnote/'+noteId);
+    this.router.navigateByUrl('/viewnote/'+noteId);
   }
 }
