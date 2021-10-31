@@ -3,11 +3,11 @@
 <h3>Used Technologies</h3>
 
 <ul>
-  <li>Ionic<li/>
-  <li>Angular<li/>
-  <li>Firebase<li/>
+ <li>Ionic<li/>
+ <li>Angular<li/>
+ <li>Firebase<li/>
 </ul>
 
-<img src="ss1.png" width="50%" height="50%">
-<img src="ss2.png" width="50%" height="50%">
+<img src="ss1.png" width="25%" height="25%">
+<img src="ss2.png" width="250%" height="25%">
 
