@@ -4,7 +4,7 @@
 
   <ul>
     <li>Ionic</li>
-    <li>Angualar</li>
+    <li>Angular</li>
     <li>Firebase</li>
   </ul>
 
